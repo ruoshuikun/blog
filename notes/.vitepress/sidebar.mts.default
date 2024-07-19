@@ -1,6 +1,11 @@
 import fs from 'fs';
 import path from 'path';
-
+import { fileURLToPath } from 'url';
+/*
+* 由于 __dirname 在 ESM 模块中不可用，我们需要使用 import.meta.url 来获取当前模块的目录路径。
+* */
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 interface SidebarItem {
     text: string;
@@ -10,7 +15,7 @@ interface SidebarItem {
 
 function getSidebar(dir: string, base: string = ''): SidebarItem[] {
   const files = fs.readdirSync(path.resolve(__dirname, '..', dir));
-
+  console.log('files', files)
   return files.map(file => {
     const fullPath = path.join(dir, file);
     const stat = fs.statSync(path.resolve(__dirname, '..', fullPath));

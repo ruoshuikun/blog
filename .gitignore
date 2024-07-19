@@ -253,4 +253,4 @@ dist
 pnpm-lock.yaml
 
 # 忽略 VitePress 和 Vite 缓存目录
-/docs/.vitepress/cache/
+/notes/.vitepress/cache/
