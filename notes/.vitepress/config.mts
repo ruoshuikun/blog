@@ -5,7 +5,7 @@ import AutoSidebar from "vite-plugin-vitepress-auto-sidebar";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "ruoshuikun-blog",
+  title: "ruoshuikun的博客",
   description: "ruoshuikun的博客",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -14,7 +14,8 @@ export default defineConfig({
       // { text: 'Examples', link: '/markdown-examples' },
       // { text: 'Config', link: '/config' },
       // { text: 'Git', link: '/git' },
-      // { text: 'Vue', link: '/vue' },
+      { text: 'Vue', link: '/vue' },
+      { text: 'Node', link: '/node' },
       { text: 'KuangStudy', link: '/kuang-study' },
     ],
     // sidebar,
@@ -43,7 +44,17 @@ export default defineConfig({
         {
           text: 'Vue',
           items: [
-            {text: '常用命令', link: '/vue/'},
+            {text: 'vue3 相关笔记', link: '/vue/vue3/'},
+            {text: 'vue2 相关笔记', link: '/vue/vue2/'},
+          ]
+        }
+      ],
+      '/node/': [
+        {
+          text: 'Node版本管理',
+          items: [
+            {text: 'volta篇【推荐】', link: '/node/volta/'},
+            {text: 'nvm篇', link: '/node/nvm/'},
           ]
         }
       ],
